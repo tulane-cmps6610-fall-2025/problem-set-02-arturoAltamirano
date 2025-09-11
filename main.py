@@ -3,6 +3,7 @@ CMPS 6610  Problem Set 2
 See problemset-02.pdf for details.
 """
 import time
+from tabulate import tabulate
 
 class BinaryNumber:
     """ done """
@@ -11,7 +12,7 @@ class BinaryNumber:
         self.binary_vec = list('{0:b}'.format(n)) 
         
     def __repr__(self):
-        return('decimal=%d binary=%s' % (self.decimal_val, ''.join(self.binary_vec))
+        return('decimal=%d binary=%s' % (self.decimal_val, ''.join(self.binary_vec)))
     
 
 ## Implement multiplication functions here. Note that you will have to
