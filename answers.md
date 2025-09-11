@@ -29,13 +29,15 @@ I have uploaded a folder (writtenSolutions) with images of my handwritten soluti
 
      **O(n ^ log <sub> 4 </sub> (6))**
 
+
   4. T(n) = 7T(n/7) + n
 
      7(7T(n/49) + n/7) + n
 
      7T(n/49) + 7(n/7) + n
 
-     O(n <sup> log <sub> 7 </sub> ((7)) </sup>)
+     O(n <sup> log <sub> 7 </sub> (7) </sup>)
+
 
   5. T(n) = 9T(n/4) + n ^ 2
 
@@ -48,8 +50,17 @@ I have uploaded a folder (writtenSolutions) with images of my handwritten soluti
      (9n ^ 2) / 16 < n ^ 2
 
      **O(n ^ 2)**
+     
 
   6. T(n) = 4T(n/2) + n ^ 3
+
+  7. 
+
+  8. 
+
+  9. 
+
+  10.
 
 2. **Algorithm Selection**
 
