@@ -54,6 +54,16 @@ I have uploaded a folder (writtenSolutions) with images of my handwritten soluti
 
   6. T(n) = 4T(n/2) + n ^ 3
 
+      4( (4T (n/8) + (n/2) ^ 3) + n ^ 3)
+
+      64T ( (n/8) + 4 (n <sup> 3 </sup> / 8) + n <sup> 3 </sup>)
+
+      n <sup> log <sub> 2 </sub> (4) </sup>
+
+      O(n <sup> 2 </sup>)
+
+
+
   7. 
 
   8. 
