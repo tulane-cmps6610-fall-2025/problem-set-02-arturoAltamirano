@@ -49,7 +49,7 @@ I have uploaded a folder (writtenSolutions) with images of my handwritten soluti
 
      (9n ^ 2) / 16 < n ^ 2
 
-     **O(n ^ 2)**
+     **O (n <sup> 2 </sup>)** 
      
 
   6. T(n) = 4T(n/2) + n ^ 3
@@ -60,7 +60,7 @@ I have uploaded a folder (writtenSolutions) with images of my handwritten soluti
 
       n <sup> log <sub> 2 </sub> (4) </sup>
 
-      O(n <sup> 2 </sup>)
+      **O (n <sup> 2 </sup>)**
 
 
 
