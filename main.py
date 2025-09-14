@@ -4,6 +4,7 @@ See problemset-02.pdf for details.
 """
 import time
 from tabulate import tabulate
+import random
 
 class BinaryNumber:
     """ done """
@@ -45,18 +46,89 @@ def pad(x,y):
     return x,y
     
 def quadratic_multiply(x, y):
-    ### TODO
-    pass
-    ###
+    #base case: one of them is a single bit - return to break recursion 
+    if len(x.binary_vec) == 1 or len(y.binary_vec) == 1:
+        return x.decimal_val * y.decimal_val
+    
+    #we need to continue recursion
+    else:
+
+        #we need to continue recursion, pad to get an even length before we split them
+        x_array, y_array = pad(x.binary_vec, y.binary_vec)
+
+        #split these into 4-quadrants and multiply all combinations 
+        #this is where the quadratic runtime comes from - have to do 4 per iteration
+        x_left, x_right = split_number(x_array)
+        y_left, y_right = split_number(y_array)
+
+        n = len(x_array)
+    
+        #left half of x and y
+        product1 = quadratic_multiply(x_left, y_left)
+        p1 = bit_shift(BinaryNumber(product1), n) 
+    
+        #right half of x and y
+        product2 = quadratic_multiply(x_right, y_right)
+        p2 = BinaryNumber(product2)   
+    
+        #left half of x and right half of y
+        product3 = quadratic_multiply(x_left, y_right)
+        
+        #right half of x and left half of y
+        product4 = quadratic_multiply(x_right, y_left)
+
+        cross = BinaryNumber(product3 + product4)
+        p3 = bit_shift(cross, n // 2)
+
+        #(xL ​yL​) ⋅ 2n + (xL ​yR ​+ xR ​yL​) ⋅ 2n/2 + (xR ​yR​)
+        return p1.decimal_val + p2.decimal_val + p3.decimal_val
 
 def subquadratic_multiply(x, y):
-    ### TODO
-    pass
-    ###
+    #base case: one of them is a single bit - return to break recursion 
+    if len(x.binary_vec) == 1 or len(y.binary_vec) == 1:
+        return x.decimal_val * y.decimal_val
+    
+    #we need to continue recursion
+    else:
+        #pad to get an even length before we split them again
+        x_array, y_array = pad(x.binary_vec, y.binary_vec)
+
+        #split these into 4-quadrants and multiply all combinations 
+        #this is where the quadratic runtime comes from - have to do 4 per iteration
+        x_left, x_right = split_number(x_array)
+        y_left, y_right = split_number(y_array)
+
+        n = len(x_array)
+    
+        #left half of x and y
+        product1 = subquadratic_multiply(x_left, y_left)
+        p1 = bit_shift(BinaryNumber(product1), n) 
+    
+        #right half of x and y
+        product2 = subquadratic_multiply(x_right, y_right)
+        p2 = BinaryNumber(product2)  
+
+        #Karatsuba's trick of instead adding these together
+        #this makes 3 operations instead of 4, hence subquadratic
+        product3 = subquadratic_multiply(
+        BinaryNumber(x_left.decimal_val + x_right.decimal_val),
+        BinaryNumber(y_left.decimal_val + y_right.decimal_val)
+        )
+
+        cross = product3 - product1 - product2
+        p3 = bit_shift(BinaryNumber(cross), n // 2) 
+
+    return p1.decimal_val + p2.decimal_val + p3.decimal_val
 
 ## Feel free to add your own tests here.
+### I noticed the default binary2int displays the binary as well and will
+### break the assertions, I dropped the call and structured the functions accordingly
+### apologies if this is undesired, see the notebook for implementations that use the provided functions
 def test_multiply():
-    assert binary2int(quadratic_multiply(BinaryNumber(2), BinaryNumber(2))) == 2*2
+    assert quadratic_multiply(BinaryNumber(2), BinaryNumber(2)) == 2*2
+    assert subquadratic_multiply(BinaryNumber(2), BinaryNumber(2)) == 2*2
+
+test_multiply()
 
 # some timing functions here that will make comparisons easy    
 def time_multiply(x, y, f):
@@ -73,15 +145,42 @@ def compare_multiply():
         res.append((n, qtime, subqtime))
     print_results(res)
 
-
 def print_results(results):
     print("\n")
     print(
-        tabulate.tabulate(
+        tabulate(
             results,
             headers=['n', 'quadratic', 'subquadratic'],
             floatfmt=".3f",
             tablefmt="github"))
     
-    
+compare_multiply()
 
+### custom built comparison - see notebook for details ###
+def print_results(results):
+    print("\n")
+    print(
+        tabulate(
+            results,
+            headers=['n', 'quadratic - bitwise generation', 'subquadratic - bitwise generation'],
+            floatfmt=".3f",
+            tablefmt="github"))
+
+def compare_multiply():
+    results = []
+    #test based on bit length with random numbers
+    for bits in [8, 16, 32, 64, 128, 256, 512, 1024]:
+        #generate random numbers based on bit length
+        #https://docs.python.org/3/library/random.html#:~:text=random.getrandbits,arbitrarily%20large%20ranges.
+        n1 = random.getrandbits(bits)
+        n2 = random.getrandbits(bits)
+        bn1, bn2 = BinaryNumber(n1), BinaryNumber(n2)
+
+        qtime = time_multiply(bn1, bn2, quadratic_multiply)
+        subqtime = time_multiply(bn1, bn2, subquadratic_multiply)
+
+        results.append((bits, qtime, subqtime))
+
+    print_results(results)
+
+compare_multiply()
