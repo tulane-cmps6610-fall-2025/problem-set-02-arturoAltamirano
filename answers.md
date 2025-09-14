@@ -62,9 +62,20 @@ I have uploaded a folder (writtenSolutions) with images of my handwritten soluti
 
       **O (n <sup> 2 </sup>)**
 
+  7. T(n) = T(n - 1) + 2
 
+      T((n - 2) + 2) + 2 
 
-  7. 
+      T(n - 2) + 4
+
+      consider that this is essentially: 
+
+      T(n - c) + 2c
+
+      just n plus some constant - if you ignore the constant...
+      T(n + c)
+
+      O(n)
 
   8. 
 
