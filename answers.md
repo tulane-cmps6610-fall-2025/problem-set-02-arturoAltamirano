@@ -89,4 +89,8 @@ I have uploaded a folder (writtenSolutions) with images of my handwritten soluti
  
 4. **Integer Multiplication Timing Results**
 
+   When prompted with random numbers, subq seems to run in 20-30% faster. This is on par with the fact that the Karatsaba algorithm reduces work from n <sup> 2 </sup> work to 1 <sup> 1.58 </sup>
+
+   You can expect a 25% reduction in workload according to this, but also the fact that the implementation of the algorithm literally drops the operations from 4 to 3, a 25% decrease.
+
 5. **Black Hats and White Hats**

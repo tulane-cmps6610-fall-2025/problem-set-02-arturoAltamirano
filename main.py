@@ -168,6 +168,8 @@ def print_results(results):
 
 def compare_multiply():
     results = []
+    qtimes = []
+    subqtimes = []
     #test based on bit length with random numbers
     for bits in [8, 16, 32, 64, 128, 256, 512, 1024]:
         #generate random numbers based on bit length
@@ -179,7 +181,11 @@ def compare_multiply():
         qtime = time_multiply(bn1, bn2, quadratic_multiply)
         subqtime = time_multiply(bn1, bn2, subquadratic_multiply)
 
+        qtimes.append(qtime)
+        subqtimes.append(subqtime)
         results.append((bits, qtime, subqtime))
+
+    print(f"sub q times are on average : {round((sum(subqtimes) / sum(qtimes)) * 100)}% faster.")
 
     print_results(results)
 
