@@ -9,7 +9,7 @@ Place all written answers from `assignment-01.md` here for easier grading.
 I have uploaded a folder (writtenSolutions) with images of my handwritten solutions, if you so prefer. - Arturo
 
 1. **Asymptotic notation**
-  1. 
+  1. SOLUTION NEEDED
 
 
   2. T(n) = 2T(n/6) + 1
@@ -62,7 +62,7 @@ I have uploaded a folder (writtenSolutions) with images of my handwritten soluti
 
       **O (n <sup> 2 </sup>)**
 
-  7. 
+  7. SOLUTION NEEDED
 
   8. T(n) = T(n - 1) + 2
 
@@ -79,9 +79,9 @@ I have uploaded a folder (writtenSolutions) with images of my handwritten soluti
 
       **O(n)**
 
-  9. 
+  9. SOLUTION NEEDED
 
-  10. 
+  10. SOLUTION NEEDED
 
 2. **Algorithm Selection**
 
@@ -102,15 +102,19 @@ I have uploaded a folder (writtenSolutions) with images of my handwritten soluti
    2n <sup> 2 </sup> / 25 < n <sup> 2 </sup>
 
    Algorithm B: w(n - 1) + (log n)
-   Work - 
+   Work - SOLUTION NEEDED
    Span - log n
 
 
    Algorithm C: w(n/3) + w(2n/3) + n <sup> 1.1 </sup>
-   Work -
+   Work - n <sup> 2 </sup>
    Span - n <sup> 1.1 </sup>
 
+   w(w(n/9) + n/3) + w(w 2n/9) + 2n/3 + n <sup> 1.1 </sup>
 
+   w(n/9) + (n/3) <sup>1.1</sup> + w(2n/3)<sup> 2 </sup> + n <sup>1.1 </sup>
+
+   w(2n/9) <sup> 2 </sup> < n <sup>2</sup>
 
 
 3. **More Algorithm Selection** 
@@ -130,7 +134,7 @@ I have uploaded a folder (writtenSolutions) with images of my handwritten soluti
       leaf dominated, so we use n <sup> log <sub> b </sub> (a)
 
    Algorithm B: 2w(n-1) + c
-      Work - 
+      Work - SOLUTION NEEDED
       Span - C (some constant)
    
    Algorithm C:
@@ -163,3 +167,5 @@ I have uploaded a folder (writtenSolutions) with images of my handwritten soluti
    5b: Finding a single white hat 
 
    Intuition: This can be characterized as a search/span problem. Just sequentially going through the search space until we satisfy a condition.
+
+   5c: 
