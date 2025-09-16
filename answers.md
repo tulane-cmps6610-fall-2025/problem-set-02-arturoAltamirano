@@ -18,7 +18,7 @@ I have uploaded a folder (writtenSolutions) with images of my handwritten soluti
 
      4(T(n/36) + 2) + 1
 
-     **n ^ log <sub> 6 </sub> (2)**
+     **n <sup> log <sub> 6 </sub> (2)</sup>**
 
 
   3. T(n) = 6T(n/4) + n
@@ -27,7 +27,7 @@ I have uploaded a folder (writtenSolutions) with images of my handwritten soluti
 
      6T(n/16) + 6 (n/4) + n
 
-     **O(n ^ log <sub> 4 </sub> (6))**
+     **O(n ^ <sup> log <sub> 4 </sub> (6))</sup>**
 
 
   4. T(n) = 7T(n/7) + n
