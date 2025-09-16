@@ -85,8 +85,69 @@ I have uploaded a folder (writtenSolutions) with images of my handwritten soluti
 
 2. **Algorithm Selection**
 
+   Algorithm A: 2w(n/5) + n<sup> 2 </sup>
+   Work - n <sup> 2 </sup>
+   Span - n <sup> 2 </sup> (quadratic time?)
+
+   2w(n/5) + n <sup> 2 </sup>
+
+   2(2w(n/25) + (n/5)) + n <sup> 2 </sup>
+
+   4w(n/25) + 2(n/25 <sup> 2 </sup>) + n <sup> 2 </sup>
+
+   root dominated so use: 
+
+   2(n <sup> 2 </sup> / 25)
+
+   2n <sup> 2 </sup> / 25 < n <sup> 2 </sup>
+
+   Algorithm B: w(n - 1) + (log n)
+   Work - 
+   Span - log n
+
+
+   Algorithm C: w(n/3) + w(2n/3) + n <sup> 1.1 </sup>
+   Work -
+   Span - n <sup> 1.1 </sup>
+
+
+
+
 3. **More Algorithm Selection** 
- 
+
+   Algorithm A: 5w(n/2) + n
+      Work - n <sup> log <sub> 4 </sub> <sup> 5 </sup> </sup>
+      Span - n (linear time)
+
+      work calculation: 
+
+      5w(n/2) + n 
+
+      5(5w(n/4) + n/2) + n
+
+      5w(n/4) + 5(n/2) + n 
+
+      leaf dominated, so we use n <sup> log <sub> b </sub> (a)
+
+   Algorithm B: 2w(n-1) + c
+      Work - 
+      Span - C (some constant)
+   
+   Algorithm C:
+      Work - n <sup> 2 </sup>
+      Span - n <sup> 2 </sup>
+
+      work calculation: 9w(n/3) + n <sup> 2 </sup>
+      9w(n/3) + O(n <sup> 2 </sup>)
+
+      9(9w(n/9) + 9(n/9)<sup> 2 </sup> + n <sup> 2 </sup>)
+
+      81w(n/9) + 9(n/9) + n <sup> 2 </sup>
+
+      9(n <sup> 2 </sup> / 9) < n <sup> 2 </sup>
+
+      O(n <sup> 2 </sup>)
+
 4. **Integer Multiplication Timing Results**
 
    When prompted with random numbers, subq seems to run in 20-30% faster. This is on par with the fact that the Karatsaba algorithm reduces work from n <sup> 2 </sup> work to 1 <sup> 1.58 </sup>
@@ -94,3 +155,11 @@ I have uploaded a folder (writtenSolutions) with images of my handwritten soluti
    You can expect a 25% reduction in workload according to this, but also the fact that the implementation of the algorithm literally drops the operations from 4 to 3, a 25% decrease.
 
 5. **Black Hats and White Hats**
+
+   5a: More than n/2 are black hats 
+
+   Intuition: If a majority of our participants are assumed to be adversarial, then no pair from the class can be trusted, since we know they are more likely to be black hats than white. 
+
+   5b: Finding a single white hat 
+
+   Intuition: This can be characterized as a search/span problem. Just sequentially going through the search space until we satisfy a condition.
