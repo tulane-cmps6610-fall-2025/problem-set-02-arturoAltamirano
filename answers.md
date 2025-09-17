@@ -3,11 +3,10 @@
 
 **Name:** Arturo Altamirano
 
-
 Place all written answers from `assignment-01.md` here for easier grading.
 
 1. **Asymptotic notation**
-  1. SOLUTION NEEDED
+  1. 
 
 
   2. T(n) = 2T(n/6) + 1
@@ -79,7 +78,20 @@ Place all written answers from `assignment-01.md` here for easier grading.
 
   9. SOLUTION NEEDED
 
-  10. SOLUTION NEEDED
+  10. T(n) = T(sqrt(N) + 1)
+
+      T(1/4 root(N) + 2) 
+
+      continues to unroll into 1/8 root N, 1/16 root N etc...
+
+      so we can say that at a certain point it becomes n <sup> 1/2<sup>k</sup>
+      </sup>
+
+      1/2<sup>k</sup> log n = n 
+
+      2<sup>k</sup> = Θ(log n)
+
+      k = Θ(log log n)
 
 2. **Algorithm Selection**
 
@@ -121,7 +133,7 @@ Place all written answers from `assignment-01.md` here for easier grading.
 
    w(n/9) + (n/3) <sup>1.1</sup> + w(2n/3)<sup> 2 </sup> + n <sup>1.1 </sup>
 
-   **w(2n/9) <sup> 2 </sup> < n <sup>2</sup>**
+   **O(w(2n/9) <sup> 2 </sup> < n <sup>2</sup>)**
 
 
 3. **More Algorithm Selection** 
@@ -140,14 +152,18 @@ Place all written answers from `assignment-01.md` here for easier grading.
 
       leaf dominated, so we use n <sup> log <sub> b </sub> (a)
 
-      O()
+      **O(n <sup> log <sub> 4 </sub> <sup> 5 </sup> </sup>)**
 
    Algorithm B: 2w(n-1) + c
-      Work - 
-      Span - C (some constant)
+      Work - n
+      Span - c (some constant)
 
-      
-   
+      2(2w(n - 2) + c)
+
+      4w(n - 3) + 2(n - 1) + c
+
+      leaf dominated, so use
+
    Algorithm C:
       Work - n <sup> 2 </sup>
       Span - n <sup> 2 </sup>
