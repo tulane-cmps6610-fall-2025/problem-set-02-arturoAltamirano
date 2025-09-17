@@ -6,8 +6,6 @@
 
 Place all written answers from `assignment-01.md` here for easier grading.
 
-I have uploaded a folder (writtenSolutions) with images of my handwritten solutions, if you so prefer. - Arturo
-
 1. **Asymptotic notation**
   1. SOLUTION NEEDED
 
@@ -36,7 +34,7 @@ I have uploaded a folder (writtenSolutions) with images of my handwritten soluti
 
      7T(n/49) + 7(n/7) + n
 
-     O(n <sup> log <sub> 7 </sub> (7) </sup>)
+     **O(n <sup> log <sub> 7 </sub> (7) </sup>)**
 
 
   5. T(n) = 9T(n/4) + n ^ 2
@@ -99,12 +97,21 @@ I have uploaded a folder (writtenSolutions) with images of my handwritten soluti
 
    2(n <sup> 2 </sup> / 25)
 
-   2n <sup> 2 </sup> / 25 < n <sup> 2 </sup>
+   **2n <sup> 2 </sup> / 25 < n <sup> 2 </sup>**
 
    Algorithm B: w(n - 1) + (log n)
-   Work - SOLUTION NEEDED
+   Work - n log n
    Span - log n
 
+   w(n - 1) + log n
+
+   w(n - 2) + (log n)<sup> 2 </sup>
+
+   w(n - k) + (log n)<sup> 2 </sup>
+
+   remove constants k
+
+   **O(n * log n)**
 
    Algorithm C: w(n/3) + w(2n/3) + n <sup> 1.1 </sup>
    Work - n <sup> 2 </sup>
@@ -114,7 +121,7 @@ I have uploaded a folder (writtenSolutions) with images of my handwritten soluti
 
    w(n/9) + (n/3) <sup>1.1</sup> + w(2n/3)<sup> 2 </sup> + n <sup>1.1 </sup>
 
-   w(2n/9) <sup> 2 </sup> < n <sup>2</sup>
+   **w(2n/9) <sup> 2 </sup> < n <sup>2</sup>**
 
 
 3. **More Algorithm Selection** 
@@ -133,9 +140,13 @@ I have uploaded a folder (writtenSolutions) with images of my handwritten soluti
 
       leaf dominated, so we use n <sup> log <sub> b </sub> (a)
 
+      O()
+
    Algorithm B: 2w(n-1) + c
-      Work - SOLUTION NEEDED
+      Work - 
       Span - C (some constant)
+
+      
    
    Algorithm C:
       Work - n <sup> 2 </sup>
@@ -150,7 +161,7 @@ I have uploaded a folder (writtenSolutions) with images of my handwritten soluti
 
       9(n <sup> 2 </sup> / 9) < n <sup> 2 </sup>
 
-      O(n <sup> 2 </sup>)
+      **O(n <sup> 2 </sup>)**
 
 4. **Integer Multiplication Timing Results**
 
