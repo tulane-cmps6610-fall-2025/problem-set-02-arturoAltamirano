@@ -6,8 +6,18 @@
 Place all written answers from `assignment-01.md` here for easier grading.
 
 1. **Asymptotic notation**
-  1. 
+  1. log n! == series of logs of size log n 
+      log 1 + log 2 + log 3 ...... + log n
 
+      every constant within this series must be less than, or equal to, in the final case: n. 
+
+      given log n!, log k < log n for all n - 1 range of k
+
+      log n! being the series of log k < series of log n 
+
+      essentially, the lead value of 'n' in 'n' log n is greater than all of these values less than n in the series log n!
+
+      **∑ log n! < ∑ n log n, for all constants less than n within n!**
 
   2. T(n) = 2T(n/6) + 1
 
@@ -59,7 +69,15 @@ Place all written answers from `assignment-01.md` here for easier grading.
 
       **O (n <sup> 2 </sup>)**
 
-  7. SOLUTION NEEDED
+  7. T(n) = 49T(n/25) + n<sup>3/2</sup> log n
+
+      49(49T(n/25<sup>2</sup>) + (n/25)<sup>3/2 * log (n/25))
+
+      49<sup>2</sup>T(n/25 ^ 2) + 49(n/25)<sup>3/2</sup> * log (n/25)
+
+      ???
+
+      **O(n<sup> 3/2 </sup log n>)**
 
   8. T(n) = T(n - 1) + 2
 
@@ -91,7 +109,7 @@ Place all written answers from `assignment-01.md` here for easier grading.
 
       2<sup>k</sup> = Θ(log n)
 
-      k = Θ(log log n)
+      **k = Θ(log log n)**
 
 2. **Algorithm Selection**
 
@@ -134,6 +152,9 @@ Place all written answers from `assignment-01.md` here for easier grading.
    w(n/9) + (n/3) <sup>1.1</sup> + w(2n/3)<sup> 2 </sup> + n <sup>1.1 </sup>
 
    **O(w(2n/9) <sup> 2 </sup> < n <sup>2</sup>)**
+
+
+   I would use algorithm b since the work and span are considerably smaller than the other options.
 
 
 3. **More Algorithm Selection** 
@@ -179,6 +200,8 @@ Place all written answers from `assignment-01.md` here for easier grading.
 
       **O(n <sup> 2 </sup>)**
 
+   I would use algorithm B since work and span are either constant or a direct factor of input.
+
 4. **Integer Multiplication Timing Results**
 
    When prompted with random numbers, subq seems to run in 20-30% faster. This is on par with the fact that the Karatsaba algorithm reduces work from n <sup> 2 </sup> work to 1 <sup> 1.58 </sup>
@@ -195,4 +218,6 @@ Place all written answers from `assignment-01.md` here for easier grading.
 
    Intuition: This can be characterized as a search/span problem. Just sequentially going through the search space until we satisfy a condition.
 
-   5c: 
+   5c: Finding all white hats 
+
+   Intuition: If you conduct a series of interviews the size of the space, you will have interviewed everyone twice with presumably a different pair, this will enable you to have a greater sampling of every individual.
