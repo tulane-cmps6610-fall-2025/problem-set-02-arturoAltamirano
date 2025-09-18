@@ -28,7 +28,7 @@ Place all written answers from `assignment-01.md` here for easier grading.
 
      leaf dominated, so use n<sup>log <sub>b</sub> a</sup>
 
-     **asymptotic notation: n <sup> log <sub> 6 </sub> (2)</sup>**
+     **asymptotic notation: O(n <sup> log <sub> 6 </sub> (2)</sup>)**
 
 
   3. T(n) = 6T(n/4) + n
@@ -50,7 +50,7 @@ Place all written answers from `assignment-01.md` here for easier grading.
 
      leaf dominated, so use n<sup>log <sub>b</sub> a</sup>
 
-     **asymptotic notation: O(n <sup> log <sub> 7 </sub> (7) </sup>)**
+     **asymptotic notation: O(n <sup> log <sub> 7 </sub> (7)</sup>)**
 
 
   5. T(n) = 9T(n/4) + n<sup>2</sup>
@@ -65,7 +65,7 @@ Place all written answers from `assignment-01.md` here for easier grading.
 
      root dominated so use c * n to define:
 
-     **asymptotic notation: O (n <sup> 2 </sup>)** 
+     **asymptotic notation: O(n <sup> 2 </sup>)** 
      
 
   6. T(n) = 4T(n/2) + <sup>3</sup>
@@ -80,7 +80,7 @@ Place all written answers from `assignment-01.md` here for easier grading.
 
       root dominated so use c * n to define:
 
-      **asymptotic notation: O (n <sup> 3 </sup>)**
+      **asymptotic notation: O(n <sup> 3 </sup>)**
 
   7. T(n) = 49T(n/25) + n<sup>3/2</sup> log n
 
@@ -119,7 +119,7 @@ Place all written answers from `assignment-01.md` here for easier grading.
 
       use c + 1 to ensure c >= 1 holds 
 
-      **asymptotic notation: O (n <sup> c + 1 </sup>)**
+      **asymptotic notation: O(n <sup> c + 1 </sup>)**
 
   10. T(n) = T(sqrt(N) + 1)
 
@@ -134,7 +134,7 @@ Place all written answers from `assignment-01.md` here for easier grading.
 
       2<sup>k</sup> = O(log n)
 
-      **asymptotic notation: k = O(log log n)**
+      **asymptotic notation: O(log log n)**
 
 2. **Algorithm Selection**
 
@@ -233,9 +233,9 @@ Place all written answers from `assignment-01.md` here for easier grading.
 
 4. **Integer Multiplication Timing Results**
 
-   When prompted with random numbers, subq seems to run in 20-30% faster. This is on par with the fact that the Karatsaba algorithm reduces work from n <sup> 2 </sup> work to 1 <sup> 1.58 </sup>
+   When prompted with random numbers, subq seems to run 20-30% faster. This is on par with the fact that the Karatsaba algorithm reduces work from n <sup> 2 </sup> work to 1 <sup> 1.58 </sup>
 
-   You can expect a 25% reduction in workload according to this, but also the fact that the implementation of the algorithm literally drops the operations from 4 to 3, a 25% decrease.
+   You can expect a 25% reduction in workload according to this, but also the fact that the implementation of the algorithm literally drops the operations from 4 to 3, an approximate 25% decrease in workload.
 
 5. **Black Hats and White Hats**
 
