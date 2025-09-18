@@ -107,7 +107,19 @@ Place all written answers from `assignment-01.md` here for easier grading.
 
       **O(n)**
 
-  9. SOLUTION NEEDED
+  9. T(n) = T(n - 1) + n<sup>c</sup>
+
+      T(n - 2) + (n - 1)<sup>c</sup> + n<sup>c</sup>
+
+      T(n - 3) + (n - 2) + n - 1 + n<sup>c</sup>
+
+      root dominated so use c * n to define:
+
+      O (n <sup> c </sup>)
+
+      use c + 1 to ensure c >= 1 holds 
+
+      **O (n <sup> c + 1 </sup>)**
 
   10. T(n) = T(sqrt(N) + 1)
 
@@ -128,7 +140,7 @@ Place all written answers from `assignment-01.md` here for easier grading.
 
    Algorithm A: 2w(n/5) + n<sup> 2 </sup>
    Work - n <sup> 2 </sup>
-   Span - n <sup> 2 </sup> (quadratic time?)
+   Span - n <sup> 2 </sup>
 
    2w(n/5) + n <sup> 2 </sup>
 
@@ -173,8 +185,6 @@ Place all written answers from `assignment-01.md` here for easier grading.
    Algorithm A: 5w(n/2) + n
       Work - n <sup> log <sub> 4 </sub> <sup> 5 </sup> </sup>
       Span - n (linear time)
-
-      work calculation: 
 
       5w(n/2) + n 
 
