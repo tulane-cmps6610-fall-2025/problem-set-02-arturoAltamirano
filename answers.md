@@ -28,7 +28,7 @@ Place all written answers from `assignment-01.md` here for easier grading.
 
      leaf dominated, so use n<sup>log <sub>b</sub> a</sup>
 
-     **asymptotic noation: n <sup> log <sub> 6 </sub> (2)</sup>**
+     **asymptotic notation: n <sup> log <sub> 6 </sub> (2)</sup>**
 
 
   3. T(n) = 6T(n/4) + n
@@ -39,7 +39,7 @@ Place all written answers from `assignment-01.md` here for easier grading.
 
      leaf dominated, so use n<sup>log <sub>b</sub> a</sup>
 
-     **asymptotic noation: O(n ^ <sup> log <sub> 4 </sub> (6))</sup>**
+     **asymptotic notation: O(n<sup> log <sub> 4 </sub> (6)</sup>)**
 
 
   4. T(n) = 7T(n/7) + n
@@ -50,27 +50,27 @@ Place all written answers from `assignment-01.md` here for easier grading.
 
      leaf dominated, so use n<sup>log <sub>b</sub> a</sup>
 
-     **asymptotic noation: O(n <sup> log <sub> 7 </sub> (7) </sup>)**
+     **asymptotic notation: O(n <sup> log <sub> 7 </sub> (7) </sup>)**
 
 
-  5. T(n) = 9T(n/4) + n ^ 2
+  5. T(n) = 9T(n/4) + n<sup>2</sup>
 
-     9(9T(n/16) + n/16 + n ^ 2)
+     9(9T(n/16) + n/16 + n<sup>2</sup>)
 
-     81T((n/16) + 9(n/16) ^ 2) + n ^ 2
+     81T((n/16) + 9(n/16)<sup>2</sup>) + <sup>2</sup>
 
-     9((n/16) ^ 2)
+     9((n/16)<sup>2</sup>)
 
-     (9n ^ 2) / 16 < n ^ 2
+     (9n<sup>2</sup>) / 16 < <sup>2</sup>
 
      root dominated so use c * n to define:
 
-     **asymptotic noation: O (n <sup> 2 </sup>)** 
+     **asymptotic notation: O (n <sup> 2 </sup>)** 
      
 
-  6. T(n) = 4T(n/2) + n ^ 3
+  6. T(n) = 4T(n/2) + <sup>3</sup>
 
-      4( (4T (n/8) + (n/2) ^ 3) + n ^ 3)
+      4( (4T (n/8) + (n/2)<sup>3</sup>) + n<sup>3</sup>)
 
       64T ((n/8) + 4 (n <sup> 3 </sup> / 8) + n <sup> 3 </sup>)
 
@@ -80,17 +80,17 @@ Place all written answers from `assignment-01.md` here for easier grading.
 
       root dominated so use c * n to define:
 
-      **asymptotic noation: O (n <sup> 3 </sup>)**
+      **asymptotic notation: O (n <sup> 3 </sup>)**
 
   7. T(n) = 49T(n/25) + n<sup>3/2</sup> log n
 
       49(49T(n/25<sup>2</sup>) + (n/25)<sup>3/2 * log (n/25))
 
-      49<sup>2</sup>T(n/25 ^ 2) + 49(n/25)<sup>3/2</sup> * log (n/25)
+      49<sup>2</sup>T(n/25<sup>2</sup>) + 49(n/25)<sup>3/2</sup> * log (n/25)
 
       leaf dominated, so use n<sup>log <sub>b</sub> a</sup>
 
-      **asymptotic noation: O(n<sup> 3/2 </sup> log n)**
+      **asymptotic notation: O(n<sup> 3/2 </sup> log n)**
 
   8. T(n) = T(n - 1) + 2
 
@@ -105,7 +105,7 @@ Place all written answers from `assignment-01.md` here for easier grading.
       just n plus some constant - if you ignore the constant...
       T(n + c)
 
-      **asymptotic noation: O(n)**
+      **asymptotic notation: O(n)**
 
   9. T(n) = T(n - 1) + n<sup>c</sup>
 
@@ -119,7 +119,7 @@ Place all written answers from `assignment-01.md` here for easier grading.
 
       use c + 1 to ensure c >= 1 holds 
 
-      **asymptotic noation: O (n <sup> c + 1 </sup>)**
+      **asymptotic notation: O (n <sup> c + 1 </sup>)**
 
   10. T(n) = T(sqrt(N) + 1)
 
@@ -134,7 +134,7 @@ Place all written answers from `assignment-01.md` here for easier grading.
 
       2<sup>k</sup> = O(log n)
 
-      **asymptotic noation: k = O(log log n)**
+      **asymptotic notation: k = O(log log n)**
 
 2. **Algorithm Selection**
 
@@ -152,7 +152,7 @@ Place all written answers from `assignment-01.md` here for easier grading.
 
    2(n <sup> 2 </sup> / 25)
 
-   **asymptotic noation: 2n <sup> 2 </sup> / 25 < n <sup> 2 </sup>**
+   **asymptotic notation: 2n <sup> 2 </sup> / 25 < n <sup> 2 </sup>**
 
    Algorithm B: w(n - 1) + (log n)
    **Work - n log n**
@@ -166,7 +166,7 @@ Place all written answers from `assignment-01.md` here for easier grading.
 
    remove constants k
 
-   **asymptotic noation: O(n * log n)**
+   **asymptotic notation: O(n * log n)**
 
    Algorithm C: w(n/3) + w(2n/3) + n <sup> 1.1 </sup>
    **Work - n <sup> 2 </sup>**
@@ -176,7 +176,7 @@ Place all written answers from `assignment-01.md` here for easier grading.
 
    w(n/9) + (n/3) <sup>1.1</sup> + w(2n/3)<sup> 2 </sup> + n <sup>1.1 </sup>
 
-   **asymptotic noation: O(w(2n/9) <sup> 2 </sup> < n <sup>2</sup>)**
+   **asymptotic notation: O(w(2n/9) <sup> 2 </sup> < n <sup>2</sup>)**
 
    **I would use algorithm b since the work and span are considerably smaller than the other options.**
 
@@ -194,7 +194,7 @@ Place all written answers from `assignment-01.md` here for easier grading.
 
       leaf dominated, so we use n <sup> log <sub> b </sub> (a)
 
-      **asymptotic noation: O(n <sup> log <sub> 4 </sub> <sup> 5 </sup> </sup>)**
+      **asymptotic notation: O(n <sup> log <sub> 4 </sub> <sup> 5 </sup> </sup>)**
 
    Algorithm B: 2w(n-1) + c
       **Work - 2<sup>n</sup>**
@@ -212,7 +212,7 @@ Place all written answers from `assignment-01.md` here for easier grading.
 
       you can replace your constants with n to get:
 
-      **asymptotic noation: O(2<sup>n</sup>)**
+      **asymptotic notation: O(2<sup>n</sup>)**
 
    Algorithm C: 9w(n/3) + n<sup>2</sup>
       **Work - n <sup> 2 </sup>**
@@ -227,7 +227,7 @@ Place all written answers from `assignment-01.md` here for easier grading.
 
       9(n <sup> 2 </sup> / 9) < n <sup> 2 </sup>
 
-      **asymptotic noation: O(n <sup> 2 </sup>)**
+      **asymptotic notation: O(n <sup> 2 </sup>)**
 
    **I would use algorithm B since work and span are either constant or a direct factor of input.**
 
