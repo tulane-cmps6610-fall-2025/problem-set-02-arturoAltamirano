@@ -26,6 +26,8 @@ Place all written answers from `assignment-01.md` here for easier grading.
 
      4(T(n/36) + 2) + 1
 
+     leaf dominated, so use n<sup>log <sub>b</sub> a</sup>
+
      **n <sup> log <sub> 6 </sub> (2)</sup>**
 
 
@@ -33,7 +35,9 @@ Place all written answers from `assignment-01.md` here for easier grading.
 
      6(6T(n/16) + n/4) + n 
 
-     6T(n/16) + 6 (n/4) + n
+     36T(n/16) + 6 (n/4) + n
+
+     leaf dominated, so use n<sup>log <sub>b</sub> a</sup>
 
      **O(n ^ <sup> log <sub> 4 </sub> (6))</sup>**
 
@@ -43,6 +47,8 @@ Place all written answers from `assignment-01.md` here for easier grading.
      7(7T(n/49) + n/7) + n
 
      7T(n/49) + 7(n/7) + n
+
+     leaf dominated, so use n<sup>log <sub>b</sub> a</sup>
 
      **O(n <sup> log <sub> 7 </sub> (7) </sup>)**
 
@@ -57,6 +63,8 @@ Place all written answers from `assignment-01.md` here for easier grading.
 
      (9n ^ 2) / 16 < n ^ 2
 
+     root dominated so use c * n to define:
+
      **O (n <sup> 2 </sup>)** 
      
 
@@ -64,11 +72,15 @@ Place all written answers from `assignment-01.md` here for easier grading.
 
       4( (4T (n/8) + (n/2) ^ 3) + n ^ 3)
 
-      64T ( (n/8) + 4 (n <sup> 3 </sup> / 8) + n <sup> 3 </sup>)
+      64T ((n/8) + 4 (n <sup> 3 </sup> / 8) + n <sup> 3 </sup>)
 
-      n <sup> log <sub> 2 </sub> (4) </sup>
+      4n<sup>3</sup>/2 < n<sup>3</sup>
 
-      **O (n <sup> 2 </sup>)**
+      2n<sup>3</sup> < n<sup>3</sup>
+
+      root dominated so use c * n to define:
+
+      **O (n <sup> 3 </sup>)**
 
   7. T(n) = 49T(n/25) + n<sup>3/2</sup> log n
 
@@ -76,7 +88,7 @@ Place all written answers from `assignment-01.md` here for easier grading.
 
       49<sup>2</sup>T(n/25 ^ 2) + 49(n/25)<sup>3/2</sup> * log (n/25)
 
-      ???
+      leaf dominated, so use n<sup>log <sub>b</sub> a</sup>
 
       **O(n<sup> 3/2 </sup log n>)**
 
@@ -154,9 +166,7 @@ Place all written answers from `assignment-01.md` here for easier grading.
 
    **O(w(2n/9) <sup> 2 </sup> < n <sup>2</sup>)**
 
-
    I would use algorithm b since the work and span are considerably smaller than the other options.
-
 
 3. **More Algorithm Selection** 
 
@@ -177,14 +187,22 @@ Place all written answers from `assignment-01.md` here for easier grading.
       **O(n <sup> log <sub> 4 </sub> <sup> 5 </sup> </sup>)**
 
    Algorithm B: 2w(n-1) + c
-      Work - n
+      Work - 2<sup>n</sup>
       Span - c (some constant)
 
       2(2w(n - 2) + c)
 
-      4w(n - 3) + 2(n - 1) + c
+      4w((n - 2) + 2c + c)
 
-      leaf dominated, so use
+      4(2w)(n - 3) + 3c
+
+      8w(n - 4) + 4c
+
+      this takes the form of 2<sup>k</sup>w( n - k)+ c(2<sup>k</sup> - 1)
+
+      you can replace your constants with n to get:
+
+      **O(2<sup>n</sup>)**
 
    Algorithm C:
       Work - n <sup> 2 </sup>
