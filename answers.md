@@ -7,6 +7,7 @@ Place all written answers from `assignment-01.md` here for easier grading.
 
 1. **Asymptotic notation**
   1. log n! == series of logs of size log n 
+
       log 1 + log 2 + log 3 ...... + log n
 
       every constant within this series must be less than, or equal to, in the final case: n. 
@@ -17,7 +18,7 @@ Place all written answers from `assignment-01.md` here for easier grading.
 
       essentially, the lead value of 'n' in 'n' log n is greater than all of these values less than n in the series log n!
 
-      **∑ log n! < ∑ n log n, for all constants less than n within n!**
+      **log n ! ∑ log k... < ∑ n log n, because all constants are less than n within n!**
 
   2. T(n) = 2T(n/6) + 1
 
