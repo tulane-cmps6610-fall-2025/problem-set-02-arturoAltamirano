@@ -18,7 +18,7 @@ Place all written answers from `assignment-01.md` here for easier grading.
 
       essentially, the lead value of 'n' in 'n' log n is greater than all of these values less than n in the series log n!
 
-      **log n ! ∑ log k... < ∑ n log n, because all constants are less than n within n!**
+      **final statement: log n ! ∑ log k... < ∑ n log n, because all constants are less than n within n!**
 
   2. T(n) = 2T(n/6) + 1
 
@@ -132,15 +132,15 @@ Place all written answers from `assignment-01.md` here for easier grading.
 
       1/2<sup>k</sup> log n = n 
 
-      2<sup>k</sup> = Θ(log n)
+      2<sup>k</sup> = O(log n)
 
       **asymptotic noation: k = O(log log n)**
 
 2. **Algorithm Selection**
 
    Algorithm A: 2w(n/5) + n<sup> 2 </sup>
-   Work - n <sup> 2 </sup>
-   Span - n <sup> 2 </sup>
+   **Work - n <sup> 2 </sup>**
+   **Span - n <sup> 2 </sup>**
 
    2w(n/5) + n <sup> 2 </sup>
 
@@ -178,7 +178,7 @@ Place all written answers from `assignment-01.md` here for easier grading.
 
    **asymptotic noation: O(w(2n/9) <sup> 2 </sup> < n <sup>2</sup>)**
 
-   I would use algorithm b since the work and span are considerably smaller than the other options.
+   **I would use algorithm b since the work and span are considerably smaller than the other options.**
 
 3. **More Algorithm Selection** 
 
@@ -214,11 +214,11 @@ Place all written answers from `assignment-01.md` here for easier grading.
 
       **asymptotic noation: O(2<sup>n</sup>)**
 
-   Algorithm C:
+   Algorithm C: 9w(n/3) + n<sup>2</sup>
       **Work - n <sup> 2 </sup>**
       **Span - n <sup> 2 </sup>**
 
-      work calculation: 9w(n/3) + n <sup> 2 </sup>
+      9w(n/3) + n <sup> 2 </sup>
       9w(n/3) + O(n <sup> 2 </sup>)
 
       9(9w(n/9) + 9(n/9)<sup> 2 </sup> + n <sup> 2 </sup>)
@@ -229,7 +229,7 @@ Place all written answers from `assignment-01.md` here for easier grading.
 
       **asymptotic noation: O(n <sup> 2 </sup>)**
 
-   I would use algorithm B since work and span are either constant or a direct factor of input.
+   **I would use algorithm B since work and span are either constant or a direct factor of input.**
 
 4. **Integer Multiplication Timing Results**
 
