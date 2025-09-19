@@ -66,7 +66,8 @@ Place all written answers from `assignment-01.md` here for easier grading.
 
      n * 1 + n log<sub>7</sub> * n
 
-     we can state that if we ignore constants and cancel our n
+     we can state that log<sub>7</sub> n dominates the constant at large growth,
+     we can then simplify to:
 
      **asymptotic notation: O(n log n)**
 
