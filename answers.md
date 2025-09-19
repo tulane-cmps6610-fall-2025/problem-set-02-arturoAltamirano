@@ -18,7 +18,11 @@ Place all written answers from `assignment-01.md` here for easier grading.
 
       essentially, the lead value of 'n' in 'n' log n is greater than all of these values less than n in the series log n!
 
-      **final statement: log n ! ∑ log k... < ∑ n log n, because all constants are less than n within n!**
+      as far as the lower bound, I beleive that if you set n to 1, they are both equivalent to 0, and this can act as a lower bound to ensure theta is true
+
+      **for the upper bound: log n ! ∑ log k... < ∑ n log n, because all constants are less than n within n!**
+
+      **for the lower bound: assuming n = 1, these two notations are equivalent, thus forming a fleeting but present lower bound**
 
   2. T(n) = 2T(n/6) + 1
 
@@ -46,11 +50,25 @@ Place all written answers from `assignment-01.md` here for easier grading.
 
      7(7T(n/49) + n/7) + n
 
-     7T(n/49) + 7(n/7) + n
+     49T(n/7<sup>2</sup>) + 7(n/7) + 2n
 
-     leaf dominated, so use n<sup>log <sub>b</sub> a</sup>
+     343T(n/7<sup>3</sup>) + 7(n/7<sup>2</sup>) + 3n
 
-     **asymptotic notation: O(n <sup> log <sub> 7 </sub> (7)</sup>)**
+     we can assume this to become:
+
+     7<sup>i</sup>T (n/7<sup>i</sup>) + i * n
+
+     you can set this guy to a constant at this point:
+
+     7<sup>log 7 n</sup>T(1) + log <sub>7</sub>i * n
+
+     this becomes equivalent to:
+
+     n * 1 + n log<sub>7</sub> * n
+
+     we can state that if we ignore constants and cancel our n
+
+     **asymptotic notation: O(n log n)**
 
 
   5. T(n) = 9T(n/4) + n<sup>2</sup>
@@ -61,7 +79,7 @@ Place all written answers from `assignment-01.md` here for easier grading.
 
      9((n/16)<sup>2</sup>)
 
-     (9n<sup>2</sup>) / 16 < <sup>2</sup>
+     (9n<sup>2</sup>) / 16 < n<sup>2</sup>
 
      root dominated so use c * n to define:
 
