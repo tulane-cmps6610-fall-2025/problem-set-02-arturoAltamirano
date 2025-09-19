@@ -197,7 +197,7 @@ Place all written answers from `assignment-01.md` here for easier grading.
 
    Algorithm C: w(n/3) + w(2n/3) + n <sup> 1.1 </sup>
 
-   **Work - n <sup> 2 </sup>**
+   **Work - n <sup> 1.1 </sup>**
 
    **Span - n <sup> 1.1 </sup>**
 
@@ -207,11 +207,11 @@ Place all written answers from `assignment-01.md` here for easier grading.
 
    root dominated so use c * n to define:
 
-    (w(2n/9) <sup> 2 </sup> < n <sup>2</sup>)
+    (w(2n/9) <sup> 2 </sup> < n <sup>1.1</sup>)
 
-    **asymptotic notation: O(n <sup>2</sup>)**
+    **asymptotic notation: O(n <sup>1.1</sup>)**
 
-   **I would use algorithm B since the work and span are considerably smaller than the other options.**
+   **I would use algorithm B since the work and span are considerably smaller than the other options. Logs tend to be superior**
 
 3. **More Algorithm Selection** 
 
@@ -268,7 +268,7 @@ Place all written answers from `assignment-01.md` here for easier grading.
 
       **asymptotic notation: O(n <sup> 2 </sup>)**
 
-   **I would use algorithm B since work and span are either constant or a direct factor of input.**
+   **I would use algorithm A since it has good span, and manageable work. It also features good parralelization potential because of this.**
 
 4. **Integer Multiplication Timing Results**
 
