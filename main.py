@@ -145,6 +145,8 @@ def compare_multiply():
         res.append((n, qtime, subqtime))
     print_results(res)
 
+    print("\nas you can see, something about this implementation makes subquadratic slower....see my altered test below.")
+
 def print_results(results):
     print("\n")
     print(
@@ -189,6 +191,6 @@ def compare_multiply():
 
     print_results(results)
 
-    print(f"\nsub q times are on average : {round((sum(subqtimes) / sum(qtimes)) * 100)}% faster.")
+    print(f"\nsub q times are on average : {round((sum(subqtimes) / sum(qtimes)) * 100)}% faster for my custom test!")
 
 compare_multiply()
