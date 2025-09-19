@@ -139,7 +139,9 @@ Place all written answers from `assignment-01.md` here for easier grading.
 2. **Algorithm Selection**
 
    Algorithm A: 2w(n/5) + n<sup> 2 </sup>
+
    **Work - n <sup> 2 </sup>**
+
    **Span - n <sup> 2 </sup>**
 
    2w(n/5) + n <sup> 2 </sup>
@@ -148,42 +150,56 @@ Place all written answers from `assignment-01.md` here for easier grading.
 
    4w(n/25) + 2(n/25 <sup> 2 </sup>) + n <sup> 2 </sup>
 
-   root dominated so use: 
+   root dominated so use c * n to define:
 
    2(n <sup> 2 </sup> / 25)
 
-   **asymptotic notation: 2n <sup> 2 </sup> / 25 < n <sup> 2 </sup>**
+   2n <sup> 2 </sup> / 25 < n <sup> 2 </sup>
+
+   **asymptotic notation: O(n <sup> 2 </sup>)**
 
    Algorithm B: w(n - 1) + (log n)
+
    **Work - n log n**
+
    **Span - log n**
 
    w(n - 1) + log n
 
-   w(n - 2) + (log n)<sup> 2 </sup>
+   w(n - 2) + (log n) + log n
 
-   w(n - k) + (log n)<sup> 2 </sup>
+   you can abstract this to constants 
 
-   remove constants k
+   w(n - k) + (log n) + log n + ....
+
+   you can remove constants k at this position to determine
 
    **asymptotic notation: O(n * log n)**
 
    Algorithm C: w(n/3) + w(2n/3) + n <sup> 1.1 </sup>
+
    **Work - n <sup> 2 </sup>**
+
    **Span - n <sup> 1.1 </sup>**
 
    w(w(n/9) + n/3) + w(w 2n/9) + 2n/3 + n <sup> 1.1 </sup>
 
    w(n/9) + (n/3) <sup>1.1</sup> + w(2n/3)<sup> 2 </sup> + n <sup>1.1 </sup>
 
-   **asymptotic notation: O(w(2n/9) <sup> 2 </sup> < n <sup>2</sup>)**
+   root dominated so use c * n to define:
 
-   **I would use algorithm b since the work and span are considerably smaller than the other options.**
+    (w(2n/9) <sup> 2 </sup> < n <sup>2</sup>)
+
+    **asymptotic notation: O(n <sup>2</sup>)**
+
+   **I would use algorithm B since the work and span are considerably smaller than the other options.**
 
 3. **More Algorithm Selection** 
 
    Algorithm A: 5w(n/2) + n
+
       **Work - n <sup> log <sub> 4 </sub> <sup> 5 </sup> </sup>**
+
       **Span - n (linear time)**
 
       5w(n/2) + n 
@@ -194,11 +210,13 @@ Place all written answers from `assignment-01.md` here for easier grading.
 
       leaf dominated, so we use n <sup> log <sub> b </sub> (a)
 
-      **asymptotic notation: O(n <sup> log <sub> 4 </sub> <sup> 5 </sup> </sup>)**
+      **asymptotic notation: O(n <sup> log <sub> 2 </sub> <sup> 5 </sup> </sup>)**
 
    Algorithm B: 2w(n-1) + c
+
       **Work - 2<sup>n</sup>**
-      **Span - c (some constant)**
+
+      **Span - n (ignore constants, as they do not matter)**
 
       2(2w(n - 2) + c)
 
@@ -215,7 +233,9 @@ Place all written answers from `assignment-01.md` here for easier grading.
       **asymptotic notation: O(2<sup>n</sup>)**
 
    Algorithm C: 9w(n/3) + n<sup>2</sup>
+
       **Work - n <sup> 2 </sup>**
+
       **Span - n <sup> 2 </sup>**
 
       9w(n/3) + n <sup> 2 </sup>
